@@ -561,7 +561,9 @@ button {
      cursor: pointer;
      background: #e6e1e1;
 }
-
+.Testimonial_box i img {
+     border-radius: 50%;
+}
 .Testimonial_box i::after {
      position: absolute;
      content: "";
