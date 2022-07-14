@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Số hạng  a: 
+    <input type="text" id="soa"><br><br>
+    Số hạng  b: 
+    <input type="text" id="sob"><br><br>
+    <form id="chon">
+        Cộng: <input type="radio" value= "cong" name="choncong">&nbsp;&nbsp;&nbsp;
+        Trừ: <input type="radio" value="tru" name="choncong">&nbsp;&nbsp;&nbsp;
+        Nhân: <input type="radio" value="nhan" name="choncong">&nbsp;&nbsp;&nbsp;
+        Chia: <input type="radio" value="chia" name="choncong">&nbsp;&nbsp;&nbsp;
+    </form>
+    <br>
+   
+    Kết quả:
+    <input type="text" id="ketqua"><br><br>
+    <input type="button" onclick="tinhtoan()" value="Kết Quả">
+    <input type="button" onclick="tinhtoan()" value="Hủy">
+    <script>
+        function tinhtoan(){
+            var a= document.getElementById("soa").value;
+            var b= document.getElementById("sob").value;
+            var c;
+            var chon= document.getElementById("chon");
+            ;
+           
+            if (chon=="cong"){
+                c=a+b;
+                document.getElementById("ketqua").value= c;
+            }else if(chon=="tru"){
+                c= a-b;
+                document.getElementById("ketqua").value= c;
+            }else if(chon=="nhan"){
+                c= a*b;
+                document.getElementById("ketqua").value= c;
+            }else{
+                c= a/b;
+                document.getElementById("ketqua").value= c;
+            }
+       
+
+
+        }
+        
+    </script>
+
+    
+</body>
+</html>
